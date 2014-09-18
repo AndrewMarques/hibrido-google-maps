@@ -2,7 +2,7 @@
 
 plugin para facilitar a integração de um google maps com triggers o plugin receberá os dados (endereços) e os triggers serão definidos por data attributes
 
-# ativar
+# ativar o plugin
 
 para ativar deve-se chamar o método `HGM::init()` nas páginas que desejamos 
 
