@@ -50,14 +50,18 @@ jQuery(document).ready(function ($) {
 
     google.maps.event.trigger(markers[0], 'click');
 
-    if ($triggers.length == 1 && $triggers.prop('tagName') == 'SELECT') {
-        $triggers.on('change', function () {
-            google.maps.event.trigger(markers[$(this).val()], 'click');
-        });
-    } else {
-        $triggers.on('click', function () {
-            google.maps.event.trigger(markers[$(this).data('hgm-change')], 'click');
-        });
-    }
+    $triggers.each(function () {
+        var data = $(this).data('hgm-change');
+
+        if (data == '') {
+            $(this).on('change', function () {
+                google.maps.event.trigger(markers[$(this).val()], 'click');
+            });
+        } else {
+            $(this).on('click', function () {
+                google.maps.event.trigger(markers[data], 'click');
+            });
+        }
+    });
 
 });
