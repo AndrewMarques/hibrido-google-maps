@@ -33,7 +33,7 @@ latitude  | latitude (required)
 longitude | longitude (required)
 info      | conteúdo da infobox
 pin       | url de uma imagem que será o pin
-callback  | sring contendo uma função que será executada quando o marker for clicado, dois parâmetros são passados o indice e o marker
+callback  | string contendo uma função que será executada quando o marker for clicado, dois parâmetros são passados o indice e o marker
 
 ## data-hgm-options
 
