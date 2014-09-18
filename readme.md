@@ -4,7 +4,7 @@ plugin para facilitar a integração de um google maps com triggers o plugin rec
 
 # ativar
 
-para ativar deve-se chamar o método estático `bootstrap` da classe `HGM` nas páginas que desejamos
+para ativar deve-se chamar o método `HGM::init()` nas páginas que desejamos 
 
 # data attributes
 
