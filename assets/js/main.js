@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
             map: map
         };
 
-        if (v.pin != undefined) {
+        if (v.pin != undefined && v.pin != false) {
             markerOptions.icon = v.pin;
         }
 
