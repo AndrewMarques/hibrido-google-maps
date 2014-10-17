@@ -63,5 +63,17 @@ jQuery(document).ready(function ($) {
             });
         }
     });
+    
+    // colocamos em uma variavel global, pois, quando o mapa é carregado
+    // escondido ele buga deixando somente parte do mapa visivel e o resto como
+    // área cinza, desse modo quando o mapa for mostrado quem está mostrando
+    // pode utilizar a váriavel global para acessar o mapa e triggar alguns
+    // eventos que façam com que esse bug seja corrigido:
+    //
+    // google.maps.event.trigger(window.hgm.map, 'resize');
+    // window.hgm.map.setZoom(window.hgm.map.getZoom());
+
+    window.hgm = {};
+    window.hgm.map = map;
 
 });
